@@ -7,7 +7,8 @@
 # and ta.key should be in the ~/vpn-keys folder
 #
 # First argument: client
-# Second argument: client  IP
+# Second argument: client IP
+# Third argument: app server IP
 # ---------------------------
 
 if [[ ! -f ~/vpn-keys/ca.crt ]] ; then

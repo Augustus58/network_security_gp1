@@ -97,8 +97,10 @@ sed -i '/cipher AES-128-CBC/auth SHA256' ~/client-configs/base.conf
 sed -i '/;tls-auth ta.key 1/a key-direction 1' ~/client-configs/base.conf
 
 echo "script-security 2" >> ~/client-configs/base.conf
-echo "echo "script-security 2" >> ~/client-configs/base.conf" >> ~/client-configs/base.conf
-echo "echo "script-security 2" >> ~/client-configs/base.conf" >> ~/client-configs/base.conf
+
+echo "up /etc/openvpn/update-resolv-conf" >> ~/client-configs/base.conf
+
+echo "down /etc/openvpn/update-resolv-conf" >> ~/client-configs/base.conf
 
 # ---------------------------
 # iptables rules
