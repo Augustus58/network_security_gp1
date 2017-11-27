@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SRC=10.8.0.10
+DST=10.3.0.5
+
+$IPT -t nat -A PREROUTING -s ${SRC} -j DNAT --to-destination ${DST}
+$IPT -A FORWARD -s ${DST} -d ${SRC} -j ACCEPT
+$IPT -A FORWARD -s ${SRC} -d ${DST} -j ACCEPT
