@@ -5,7 +5,7 @@ def main():
         i = input('m for message, e for exit: ')
         if i == 'm':
             s = socket.socket()
-            host = 'localhost'
+            host = '10.3.0.5'
             port = 8080
             s.connect((host, port))
             print('connecting to ' + str(s.getpeername()))
