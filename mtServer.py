@@ -11,8 +11,7 @@ def handleRequest(c, addr):
 
 def main():
     s = socket.socket()
-    #host = '10.3.0.5'
-    host = 'localhost'
+    host = '10.3.0.5'
     port = 8080
     s.bind((host, port))
     s.listen(5)
